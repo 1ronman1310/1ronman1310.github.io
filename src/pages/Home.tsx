@@ -5,7 +5,7 @@ import ResearchCard from '../components/ResearchCard';
 import TeamMember from '../components/TeamMember';
 import { MEMBERS, NEWS, PUBLICATIONS, RESEARCH_AREAS, LAB_INFO } from '../constants';
 import { Role } from '../types';
-import { Calendar, FileText, Code, ExternalLink, ArrowRight } from 'lucide-react';
+import { Calendar, FileText, Code, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
