@@ -22,7 +22,7 @@ export const MEMBERS: Member[] = [
     name: 'Dr. Jiawei Wang', // 修改名字
     role: Role.PI,
     bio: 'Principal Investigator. Leading research in integrated photonics and AI hardware.',
-    image: '/image/wjw.jpg', // 修改照片链接
+    image: 'public/images/wjw.jpg', // 修改照片链接
     email: 'wangjw7@hit.edu.cn',
     links: {
       googleScholar: 'https://scholar.google.com/citations?hl=zh-CN&user=_6oPUfYAAAAJ',
@@ -37,7 +37,7 @@ export const MEMBERS: Member[] = [
     name: 'Jin Li',
     role: Role.PHD,
     bio: 'Researching silicon photonics.',
-    image: '/image/lj.jpg',
+    image: 'public/images/lj.jpg',
     email: 'student.a@univ.edu'
   },
   {
@@ -45,7 +45,7 @@ export const MEMBERS: Member[] = [
     name: 'Yaoming Wei',
     role: Role.PHD,
     bio: 'Researching silicon photonics.',
-    image: '/image/wym.jpg',
+    image: '/images/wym.jpg',
     email: 'student.b@univ.edu'
   },
   {
@@ -53,7 +53,7 @@ export const MEMBERS: Member[] = [
     name: 'Xiujie Dou',
     role: Role.PHD,
     bio: 'Researching silicon photonics.',
-    image: '/image/dxj.jpg',
+    image: '/images/dxj.jpg',
     email: 'student.c@univ.edu'
   },
 
@@ -63,7 +63,7 @@ export const MEMBERS: Member[] = [
     name: 'Kexun Wu',
     role: Role.MASTER,
     bio: 'Researching silicon photonics.',
-    image: '/image/wkx.jpg',
+    image: '/images/wkx.jpg',
     email: 'student.d@univ.edu'
   },
   {
@@ -71,7 +71,7 @@ export const MEMBERS: Member[] = [
     name: 'Xuecheng Yan',
     role: Role.MASTER,
     bio: 'Researching silicon photonics.',
-    image: '/image/yxc.jpg',
+    image: '/images/yxc.jpg',
     email: 'student.e@univ.edu'
   },
   {
@@ -79,7 +79,7 @@ export const MEMBERS: Member[] = [
     name: 'Yiyin Xiao',
     role: Role.MASTER,
     bio: 'Researching silicon photonics.',
-    image: '/image/xyy.jpg',
+    image: '/images/xyy.jpg',
     email: 'student.e@univ.edu'
   },
   {
@@ -87,7 +87,7 @@ export const MEMBERS: Member[] = [
     name: 'Mingfu',
     role: Role.MASTER,
     bio: 'Researching silicon photonics.',
-    image: '/image/mf.jpg',
+    image: '/images/mf.jpg',
     email: 'student.e@univ.edu'
   },
     {
@@ -95,7 +95,7 @@ export const MEMBERS: Member[] = [
     name: 'Shuhan Chen',
     role: Role.MASTER,
     bio: 'Researching silicon photonics.',
-    image: '/image/csh.jpg',
+    image: '/images/csh.jpg',
     email: 'student.e@univ.edu'
   },
 
@@ -112,7 +112,7 @@ export const MEMBERS: Member[] = [
     name: 'Jingjiang Li',
     role: Role.ALUMNI,
     bio: 'Researching silicon photonics.',
-    image: '/image/ljj.jpg',
+    image: '/images/ljj.jpg',
     email: 'student.d@univ.edu'
   },
   {
@@ -120,7 +120,7 @@ export const MEMBERS: Member[] = [
     name: 'Mingquan Deng',
     role: Role.ALUMNI,
     bio: 'Researching silicon photonics.',
-    image: '/image/dmq.jpg',
+    image: '/images/dmq.jpg',
     email: 'student.e@univ.edu'
   },
 
