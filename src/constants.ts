@@ -22,7 +22,7 @@ export const MEMBERS: Member[] = [
     name: 'Dr. Jiawei Wang', // 修改名字
     role: Role.PI,
     bio: 'Principal Investigator. Leading research in integrated photonics and AI hardware.',
-    image: 'public/images/wjw.jpg', // 修改照片链接
+    image: '/images/wjw.jpg', // 修改照片链接
     email: 'wangjw7@hit.edu.cn',
     links: {
       googleScholar: 'https://scholar.google.com/citations?hl=zh-CN&user=_6oPUfYAAAAJ',
@@ -37,7 +37,7 @@ export const MEMBERS: Member[] = [
     name: 'Jin Li',
     role: Role.PHD,
     bio: 'Researching silicon photonics.',
-    image: 'public/images/lj.jpg',
+    image: '/images/lj.jpg',
     email: 'student.a@univ.edu'
   },
   {
