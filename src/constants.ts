@@ -1,5 +1,8 @@
 import { LabInfo, Member, NewsItem, Publication, ResearchArea, Role } from './types';
 
+// ==========================================
+// 1. LAB INFORMATION (Modify here)
+// ==========================================
 export const LAB_INFO: LabInfo = {
   name: "Integrated Photonics & Intelligence Lab",
   university: "University of Technology",
@@ -8,6 +11,124 @@ export const LAB_INFO: LabInfo = {
   email: "contact@ipl-lab.edu"
 };
 
+// ==========================================
+// 2. TEAM MEMBERS (Modify here)
+// ==========================================
+// To add a photo: Upload it to GitHub public folder or use an external URL.
+export const MEMBERS: Member[] = [
+  // Principal Investigator
+  {
+    id: 'pi-1',
+    name: 'Dr. Jiawei Wang', // 修改名字
+    role: Role.PI,
+    bio: 'Principal Investigator. Leading research in integrated photonics and AI hardware.',
+    image: '/image/wjw.jpg', // 修改照片链接
+    email: 'wangjw7@hit.edu.cn',
+    links: {
+      googleScholar: 'https://scholar.google.com/citations?hl=zh-CN&user=_6oPUfYAAAAJ',
+      twitter: '#',
+      website: '#'
+    }
+  },
+  
+  // PhD Students
+  {
+    id: 'phd-1',
+    name: 'Jin Li',
+    role: Role.PHD,
+    bio: 'Researching silicon photonics.',
+    image: '/image/lj.jpg',
+    email: 'student.a@univ.edu'
+  },
+  {
+    id: 'phd-2',
+    name: 'Yaoming Wei',
+    role: Role.PHD,
+    bio: 'Researching silicon photonics.',
+    image: '/image/wym.jpg',
+    email: 'student.b@univ.edu'
+  },
+  {
+    id: 'phd-3',
+    name: 'Xiujie Dou',
+    role: Role.PHD,
+    bio: 'Researching silicon photonics.',
+    image: '/image/dxj.jpg',
+    email: 'student.c@univ.edu'
+  },
+
+  // Master Students
+  {
+    id: 'ms-1',
+    name: 'Kexun Wu',
+    role: Role.MASTER,
+    bio: 'Researching silicon photonics.',
+    image: '/image/wkx.jpg',
+    email: 'student.d@univ.edu'
+  },
+  {
+    id: 'ms-2',
+    name: 'Xuecheng Yan',
+    role: Role.MASTER,
+    bio: 'Researching silicon photonics.',
+    image: '/image/yxc.jpg',
+    email: 'student.e@univ.edu'
+  },
+  {
+    id: 'ms-3',
+    name: 'Yiyin Xiao',
+    role: Role.MASTER,
+    bio: 'Researching silicon photonics.',
+    image: '/image/xyy.jpg',
+    email: 'student.e@univ.edu'
+  },
+  {
+    id: 'ms-4',
+    name: 'Mingfu',
+    role: Role.MASTER,
+    bio: 'Researching silicon photonics.',
+    image: '/image/mf.jpg',
+    email: 'student.e@univ.edu'
+  },
+    {
+    id: 'ms-5',
+    name: 'Shuhan Chen',
+    role: Role.MASTER,
+    bio: 'Researching silicon photonics.',
+    image: '/image/csh.jpg',
+    email: 'student.e@univ.edu'
+  },
+
+  // Alumni
+  {
+    id: 'alumni-1',
+    name: 'Jiaqi Zhao',
+    role: Role.ALUMNI,
+    bio: 'Researching silicon photonics.',
+    image: 'https://picsum.photos/400/400?random=6',
+  },
+  {
+    id: 'alumni-2',
+    name: 'Jingjiang Li',
+    role: Role.ALUMNI,
+    bio: 'Researching silicon photonics.',
+    image: '/image/ljj.jpg',
+    email: 'student.d@univ.edu'
+  },
+  {
+    id: 'alumni-3',
+    name: 'Mingquan Deng',
+    role: Role.ALUMNI,
+    bio: 'Researching silicon photonics.',
+    image: '/image/dmq.jpg',
+    email: 'student.e@univ.edu'
+  },
+
+];
+
+// ==========================================
+// 3. NEWS (Modify here)
+// ==========================================
 export const NEWS: NewsItem[] = [
   {
     id: 'n1',
@@ -18,7 +139,7 @@ export const NEWS: NewsItem[] = [
   {
     id: 'n2',
     date: '2024-02-10',
-    title: 'Prof. Doe received the Early Career Award',
+    title: 'Dr. Hu received the Early Career Award',
     description: 'Recognizing outstanding contributions to the field of integrated photonics.'
   },
   {
@@ -26,21 +147,12 @@ export const NEWS: NewsItem[] = [
     date: '2023-11-20',
     title: 'Two papers accepted to CLEO 2024',
     description: 'Congratulations to our students for their hard work on silicon photonics.'
-  },
-  {
-    id: 'n4',
-    date: '2023-09-01',
-    title: 'New Grant Awarded',
-    description: 'We received a $2M grant to study optical neural networks.'
-  },
-  {
-    id: 'n5',
-    date: '2023-08-15',
-    title: 'Welcome new PhD students',
-    description: 'The lab continues to grow with 3 new members.'
   }
 ];
 
+// ==========================================
+// 4. RESEARCH AREAS (Modify here)
+// ==========================================
 export const RESEARCH_AREAS: ResearchArea[] = [
   {
     id: 'r1',
@@ -62,62 +174,15 @@ export const RESEARCH_AREAS: ResearchArea[] = [
   }
 ];
 
-// Helper to generate students
-const generateStudents = (): Member[] => {
-  const students: Member[] = [];
-  // Modified to include Alumni for demonstration
-  const roles = [
-    Role.PHD, Role.PHD, Role.PHD, Role.PHD, 
-    Role.MASTER, Role.MASTER, Role.MASTER, 
-    Role.ALUMNI, Role.ALUMNI, Role.ALUMNI
-  ];
-  
-  for (let i = 0; i < roles.length; i++) {
-    students.push({
-      id: `s${i}`,
-      name: `Member Name ${i+1}`,
-      role: roles[i],
-      bio: 'Researching integrated circuits.',
-      image: `https://picsum.photos/400/400?random=${20+i}`,
-      email: roles[i] !== Role.ALUMNI ? `student${i+1}@univ.edu` : undefined
-    });
-  }
-  return students;
-};
-
-export const MEMBERS: Member[] = [
-  {
-    id: 'm1',
-    name: 'Dr. John Doe',
-    role: Role.PI,
-    bio: 'Associate Professor of Electrical Engineering. PhD from MIT. Leading research in integrated photonics and AI hardware.',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop', // Professional headshot look
-    email: 'john.doe@univ.edu',
-    links: {
-      googleScholar: '#',
-      twitter: '#',
-      website: '#'
-    }
-  },
-  ...generateStudents()
-];
-
-// Generating more publications for demonstration
-const extraPubs: Publication[] = Array.from({ length: 8 }).map((_, i) => ({
-  id: `ep${i}`,
-  title: `Advanced Photonic Integrated Circuits for High-Speed Computing Vol. ${i+1}`,
-  authors: ['Student Name', 'John Doe'],
-  venue: i % 2 === 0 ? 'Nature Photonics' : 'Optica',
-  year: 2021 - i,
-  highlight: false,
-  links: { pdf: '#' }
-}));
-
+// ==========================================
+// 5. PUBLICATIONS (Modify here)
+// ==========================================
+// To generate more, just copy-paste the object inside the array.
 export const PUBLICATIONS: Publication[] = [
   {
     id: 'p1',
     title: 'Integrated Optical Tensor Cores for Neural Networks',
-    authors: ['Jane Smith', 'John Doe'],
+    authors: ['Student A', 'Jianqi Hu'],
     venue: 'Nature Electronics',
     year: 2024,
     highlight: true,
@@ -126,7 +191,7 @@ export const PUBLICATIONS: Publication[] = [
   {
     id: 'p2',
     title: 'Inverse Design of Nanophotonic Structures using Diffusion Models',
-    authors: ['Michael Chen', 'John Doe'],
+    authors: ['Student B', 'Jianqi Hu'],
     venue: 'Nature Communications',
     year: 2023,
     highlight: true,
@@ -135,7 +200,7 @@ export const PUBLICATIONS: Publication[] = [
   {
     id: 'p3',
     title: 'High-bandwidth Silicon Photonic Modulators',
-    authors: ['Student Three', 'John Doe'],
+    authors: ['Student C', 'Jianqi Hu'],
     venue: 'OFC 2023',
     year: 2023,
     highlight: true,
@@ -144,7 +209,7 @@ export const PUBLICATIONS: Publication[] = [
   {
     id: 'p4',
     title: 'Scalable Optical Computing Architectures',
-    authors: ['Sarah Johnson', 'John Doe'],
+    authors: ['Student A', 'Jianqi Hu'],
     venue: 'IEEE JSTQE',
     year: 2022,
     highlight: false,
@@ -153,11 +218,10 @@ export const PUBLICATIONS: Publication[] = [
   {
     id: 'p5',
     title: 'Low-loss Waveguides for Mid-Infrared Sensing',
-    authors: ['Bob Brown', 'John Doe'],
+    authors: ['Student D', 'Jianqi Hu'],
     venue: 'Optics Express',
     year: 2022,
     highlight: false,
     links: { pdf: '#' }
-  },
-  ...extraPubs
+  }
 ];
