@@ -326,7 +326,7 @@ export const PUBLICATIONS: Publication[] = [
     venue: 'Scientific Reports',
     year: 2014,
     highlight: false,
-    links: { pdf: 'public\papers\Silicon coupled-resonator optical-waveguide-based biosensors using light-scattering pattern recognition with pixelized mode-field intensity distributions.pdf' }
+    links: { pdf: 'public/papers/Silicon coupled-resonator.pdf' }
   }
 
 ];
