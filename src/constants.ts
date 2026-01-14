@@ -200,19 +200,19 @@ export const RESEARCH_AREAS: ResearchArea[] = [
     id: 'r1',
     title: 'Silicon Photonics &  Thin-film Lithium Niobate Photonics',
     description: 'Exploring new designs and mechanisms, aiming for scalable, high-yield, and reliable integrated photonic devices.',
-    image: 'public/research/SP.jpg'
+    image: '/research/SP.jpg'
   },
   {
     id: 'r2',
     title: 'Non-Hermitian Photonics & Topological Photonics',
     description: 'Delving into the exquisite interplay of symmetry and topology in photonics, where gain, loss, and non-reciprocity enable unprecedented optical control.',
-    image: 'public/research/NH.jpg'
+    image: '/research/NH.jpg'
   },
   {
     id: 'r3',
     title: 'Optical sensing & Computing',
     description: 'Harnessing the elegance of light-matter interactions to build secure, sensitive, and AI-empowered photonic applications.',
-    image: 'public/research/OC.jpg'
+    image: '/research/OC.jpg'
   }
 ];
 
@@ -231,7 +231,7 @@ export const PUBLICATIONS: Publication[] = [
     year: 2026,
     highlight: true,
     links: { 
-      pdf: 'public/papers/On-chip non-Hermitian cavity quantum electrodynamics.pdf', // 示例：指向 public/papers/example-paper.pdf
+      pdf: '/papers/On-chip non-Hermitian cavity quantum electrodynamics.pdf', // 示例：指向 public/papers/example-paper.pdf
       // code: 'https://github.com/your-repo/code.zip' // 示例：直接下载或指向 GitHub
     }
   },
@@ -243,7 +243,7 @@ export const PUBLICATIONS: Publication[] = [
     year: 2025,
     highlight: true,
     links: { 
-      pdf: 'public/papers/Reconfigurable resonance trapping in single optical microresonators.pdf' // 如果没有 PDF，可以留空或写 '#'
+      pdf: '/papers/Reconfigurable resonance trapping in single optical microresonators.pdf' // 如果没有 PDF，可以留空或写 '#'
     }
   },
   {
@@ -253,7 +253,7 @@ export const PUBLICATIONS: Publication[] = [
     venue: 'Laser & Photonics Reviews',
     year: 2025,
     highlight: true,
-    links: { pdf: 'public/papers/Low-threshold chirality-enabled silicon photonic diode.pdf' }
+    links: { pdf: '/papers/Low-threshold chirality-enabled silicon photonic diode.pdf' }
   },
   {
     id: 'p4',
@@ -262,7 +262,7 @@ export const PUBLICATIONS: Publication[] = [
     venue: 'Laser & Photonics Reviews',
     year: 2024,
     highlight: false,
-    links: { pdf: 'public/papers/Electrically reconfigurable mode chirality in integrated microring resonators.pdf',
+    links: { pdf: '/papers/Electrically reconfigurable mode chirality in integrated microring resonators.pdf',
       code: '#' 
 
     }
@@ -274,7 +274,7 @@ export const PUBLICATIONS: Publication[] = [
     venue: 'Science Advances',
     year: 2023,
     highlight: true,
-    links: { pdf: 'public/papers/Revealing molecular diffusion dynamics in polymer microspheres by optical resonances.pdf' }
+    links: { pdf: '/papers/Revealing molecular diffusion dynamics in polymer microspheres by optical resonances.pdf' }
   },
   {
     id: 'p6',
@@ -284,7 +284,7 @@ export const PUBLICATIONS: Publication[] = [
     year: 2023,
     highlight: true,
     links: { 
-      pdf: 'public/papers/Experimental observation of Berry phases in optical Möbius ring microcavities.pdf', // 示例：指向 public/papers/example-paper.pdf
+      pdf: '/papers/Experimental observation of Berry phases in optical Möbius ring microcavities.pdf', // 示例：指向 public/papers/example-paper.pdf
       // code: 'https://github.com/your-repo/code.zip' // 示例：直接下载或指向 GitHub
     }
   },
@@ -296,7 +296,7 @@ export const PUBLICATIONS: Publication[] = [
     year: 2020,
     highlight: false,
     links: { 
-      pdf: 'public/papers/Steering directional light emission and mode chirality through post shaping of cavity geometry.pdf' // 如果没有 PDF，可以留空或写 '#'
+      pdf: '/papers/Steering directional light emission and mode chirality through post shaping of cavity geometry.pdf' // 如果没有 PDF，可以留空或写 '#'
     }
   },
   {
@@ -306,7 +306,7 @@ export const PUBLICATIONS: Publication[] = [
     venue: 'Science Advances',
     year: 2019,
     highlight: false,
-    links: { pdf: 'public/papers/Water nanostructures on oxide in-situ dynamics probed by optical resonances.pdf' }
+    links: { pdf: '/papers/Water nanostructures on oxide in-situ dynamics probed by optical resonances.pdf' }
   },
   {
     id: 'p9',
@@ -315,7 +315,7 @@ export const PUBLICATIONS: Publication[] = [
     venue: 'Nano Letters',
     year: 2018,
     highlight: false,
-    links: { pdf: 'public/papers/Curved nanomembrane-based concentric ring cavities for supermode hybridization.pdf',
+    links: { pdf: '/papers/Curved nanomembrane-based concentric ring cavities for supermode hybridization.pdf',
       code: '#' 
       }
   },
