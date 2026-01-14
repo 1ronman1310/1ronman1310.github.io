@@ -4,12 +4,20 @@ import { LabInfo, Member, NewsItem, Publication, ResearchArea, Role } from './ty
 // 1. LAB INFORMATION (Modify here)
 // ==========================================
 export const LAB_INFO: LabInfo = {
-  name: "Integrated Photonics & Intelligence Lab",
-  university: "University of Technology",
-  description: "Bridging the gap between nanophotonic devices and artificial intelligence. We design next-generation optical chips for computing and sensing.",
-  address: "Room 404, Building C, 123 Science Drive, Tech City",
-  email: "contact@ipl-lab.edu"
+  name: "Integrated Lightwave Lab", // 修改为：Integrated Lightwave Lab
+  university: "Harbin Institute of Technology (Shenzhen)", // 修改为：Harbin Institute of technology(Shenzhen)
+  // 下面对应 Home 页面的 "Designing the future..." 下面的介绍文案
+  description: "At the intersection of discovery and innovation,we employ integrated micro/nanophotonic platforms to probe the laws of physics and translate insights into transformative solutions for critical fields from healthcare to data security",
+  address: "L1310, Information Science Building, Harbin Institute of Technology (Shenzhen), Shenzhen, China", // 修改地址
+  email: "wangjw7@hit.edu.cn" // 修改联系邮箱
 };
+
+// ==========================================
+// 1.1 HERO BACKGROUND IMAGE (Modify here)
+// ==========================================
+// Home 页面大背景图。可以使用网络链接，也可以把图片放在 public/images/ 下，然后填 '/images/bg.jpg'
+export const HERO_BG_IMAGE = "public/papers/bg.png";
+
 
 // ==========================================
 // 2. TEAM MEMBERS (Modify here)
@@ -21,7 +29,7 @@ export const MEMBERS: Member[] = [
     id: 'pi-1',
     name: 'Dr. Jiawei Wang', // 修改名字
     role: Role.PI,
-    bio: 'Principal Investigator. Leading research in integrated photonics and AI hardware.',
+    bio: 'Wang Jiawei is currently a full professor at the Harbin Institute of Technology (Shenzhen). He received his PhD degree in Electronic & Computer Engineering from the Hong Kong University of Science and Technology in 2016. From 2016 to 2020, he was engaged in post-doctoral research at the Leibniz IFW Dresden and the Department of Electronics and Information Engineering at Chemnitz University of Technology, Germany.He has published over 70 papers in SCI-indexed journals, including Nature Photonics, Science Advances, Laser & Photonics Reviews, Nano Letters, and ACS Nano, as well as more than 20 proceedings in EI-indexed conferences such as CLEO, SPIE Photonics West, OECC, and ACP. He has also co-authored two book chapters and holds six patents.',
     image: '/images/wjw.jpg', // 修改照片链接
     email: 'wangjw7@hit.edu.cn',
     links: {
@@ -123,7 +131,41 @@ export const MEMBERS: Member[] = [
     image: '/images/dmq.jpg',
     email: 'student.e@univ.edu'
   },
-
+  {
+    id: 'alumni-4',
+    name: 'Juntao Duan',
+    role: Role.ALUMNI,
+    bio: 'Researching silicon photonics.',
+    image: 'https://picsum.photos/400/400?random=6',
+  },
+  {
+    id: 'alumni-5',
+    name: 'Yu Miao',
+    role: Role.ALUMNI,
+    bio: 'Researching silicon photonics.',
+    image: 'https://picsum.photos/400/400?random=6',
+  },
+  {
+    id: 'alumni-6',
+    name: 'Yihao Chen',
+    role: Role.ALUMNI,
+    bio: 'Researching silicon photonics.',
+    image: 'https://picsum.photos/400/400?random=6',
+  },
+  {
+    id: 'alumni-7',
+    name: 'Lan Wu',
+    role: Role.ALUMNI,
+    bio: 'Researching silicon photonics.',
+    image: 'https://picsum.photos/400/400?random=6',
+  },
+  {
+    id: 'alumni-8',
+    name: 'Shengqi Sun',
+    role: Role.ALUMNI,
+    bio: 'Researching silicon photonics.',
+    image: 'https://picsum.photos/400/400?random=6',
+  },
 ];
 
 // ==========================================
@@ -177,51 +219,114 @@ export const RESEARCH_AREAS: ResearchArea[] = [
 // ==========================================
 // 5. PUBLICATIONS (Modify here)
 // ==========================================
-// To generate more, just copy-paste the object inside the array.
+// 如何添加下载链接：
+// 1. 把你的 PDF 文件放在 public 文件夹里 (例如 public/papers/my-paper.pdf)
+// 2. 将 pdf 字段设置为 '/papers/my-paper.pdf'
 export const PUBLICATIONS: Publication[] = [
   {
     id: 'p1',
-    title: 'Integrated Optical Tensor Cores for Neural Networks',
-    authors: ['Student A', 'Jianqi Hu'],
-    venue: 'Nature Electronics',
-    year: 2024,
+    title: 'On-chip non-Hermitian cavity quantum electrodynamics',
+    authors: ['Y. Chen', 'X. Wang','Jin Li','Kexun Wu'],
+    venue: 'arXiv',
+    year: 2026,
     highlight: true,
-    links: { pdf: '#', code: '#' }
+    links: { 
+      pdf: 'public/papers/On-chip non-Hermitian cavity quantum electrodynamics.pdf', // 示例：指向 public/papers/example-paper.pdf
+      // code: 'https://github.com/your-repo/code.zip' // 示例：直接下载或指向 GitHub
+    }
   },
   {
     id: 'p2',
-    title: 'Inverse Design of Nanophotonic Structures using Diffusion Models',
-    authors: ['Student B', 'Jianqi Hu'],
-    venue: 'Nature Communications',
-    year: 2023,
+    title: 'Reconfigurable resonance trapping in single optical microresonators',
+    authors: ['Jin Li', 'M. Tang'],
+    venue: 'Newton',
+    year: 2025,
     highlight: true,
-    links: { pdf: '#', project: '#' }
+    links: { 
+      pdf: 'public/papers/Reconfigurable resonance trapping in single optical microresonators.pdf' // 如果没有 PDF，可以留空或写 '#'
+    }
   },
   {
     id: 'p3',
-    title: 'High-bandwidth Silicon Photonic Modulators',
-    authors: ['Student C', 'Jianqi Hu'],
-    venue: 'OFC 2023',
-    year: 2023,
+    title: 'Low-threshold chirality-enabled silicon photonic diode',
+    authors: ['J. Li','Juntao Duan'],
+    venue: 'Laser & Photonics Reviews',
+    year: 2025,
     highlight: true,
-    links: { pdf: '#' }
+    links: { pdf: 'public/papers/Low-threshold chirality-enabled silicon photonic diode.pdf' }
   },
   {
     id: 'p4',
-    title: 'Scalable Optical Computing Architectures',
-    authors: ['Student A', 'Jianqi Hu'],
-    venue: 'IEEE JSTQE',
-    year: 2022,
+    title: 'Electrically reconfigurable mode chirality in integrated microring resonators',
+    authors: ['Yihao Chen', 'Jin Li','Juntao Duan'],
+    venue: 'Laser & Photonics Reviews',
+    year: 2024,
     highlight: false,
-    links: { pdf: '#', code: '#' }
+    links: { pdf: 'public/papers/Electrically reconfigurable mode chirality in integrated microring resonators.pdf',
+      code: '#' 
+
+    }
   },
   {
     id: 'p5',
-    title: 'Low-loss Waveguides for Mid-Infrared Sensing',
-    authors: ['Student D', 'Jianqi Hu'],
-    venue: 'Optics Express',
-    year: 2022,
+    title: 'Revealing molecular diffusion dynamics in polymer microspheres by optical resonances',
+    authors: ['Jiawei Wang', 'Jin Li'],
+    venue: 'Science Advances',
+    year: 2023,
+    highlight: true,
+    links: { pdf: 'public/papers/Revealing molecular diffusion dynamics in polymer microspheres by optical resonances.pdf' }
+  },
+  {
+    id: 'p6',
+    title: 'Experimental observation of Berry phases in optical Möbius ring microcavities',
+    authors: ['Jiawei Wang'],
+    venue: 'Nature Photonics',
+    year: 2023,
+    highlight: true,
+    links: { 
+      pdf: 'public/papers/Experimental observation of Berry phases in optical Möbius ring microcavities.pdf', // 示例：指向 public/papers/example-paper.pdf
+      // code: 'https://github.com/your-repo/code.zip' // 示例：直接下载或指向 GitHub
+    }
+  },
+  {
+    id: 'p7',
+    title: 'Steering directional light emission and mode chirality through post shaping of cavity geometry',
+    authors: ['Jiawei Wang'],
+    venue: 'Laser & Photonics Review',
+    year: 2020,
     highlight: false,
-    links: { pdf: '#' }
+    links: { 
+      pdf: 'public/papers/Steering directional light emission and mode chirality through post shaping of cavity geometry.pdf' // 如果没有 PDF，可以留空或写 '#'
+    }
+  },
+  {
+    id: 'p8',
+    title: 'Water nanostructures on oxide: in-situ dynamics probed by optical resonances',
+    authors: ['Y. Yin', 'Jiawei Wang'],
+    venue: 'Science Advances',
+    year: 2019,
+    highlight: false,
+    links: { pdf: 'public/papers/Water nanostructures on oxide in-situ dynamics probed by optical resonances.pdf' }
+  },
+  {
+    id: 'p9',
+    title: 'Curved nanomembrane-based concentric ring cavities for supermode hybridization',
+    authors: ['Jiawei Wang'],
+    venue: 'Nano Letters',
+    year: 2018,
+    highlight: false,
+    links: { pdf: 'public/papers/Curved nanomembrane-based concentric ring cavities for supermode hybridization.pdf',
+      code: '#' 
+      }
+  },
+  {
+    id: 'p10',
+    title: 'Silicon coupled-resonator optical-waveguide-based biosensors using light-scattering pattern recognition with pixelized mode-field intensity distributions',
+    authors: ['Jiawei Wang'],
+    venue: 'Scientific Reports',
+    year: 2014,
+    highlight: false,
+    links: { pdf: 'public\papers\Silicon coupled-resonator optical-waveguide-based biosensors using light-scattering pattern recognition with pixelized mode-field intensity distributions.pdf' }
   }
+
 ];

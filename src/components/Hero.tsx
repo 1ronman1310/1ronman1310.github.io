@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { LAB_INFO } from '../constants';
+import { LAB_INFO, HERO_BG_IMAGE } from '../constants';
 import { ArrowDown } from 'lucide-react';
 
 interface Photon {
@@ -78,12 +78,8 @@ const Hero: React.FC = () => {
     }
 
     const draw = () => {
-      // Create a fade effect for trails instead of clearing completely
-      // This leaves a ghost image of previous frames
       ctx.fillStyle = 'rgba(0, 0, 0, 0.2)'; 
       ctx.fillRect(0, 0, width, height);
-      // However, since we have a background image, we actually want to clear 
-      // but manually manage trails for better performance and transparency control
       ctx.clearRect(0, 0, width, height);
 
       photons.forEach((p, index) => {
@@ -123,7 +119,6 @@ const Hero: React.FC = () => {
 
         // 2. Trail Logic
         p.trail.push({ x: p.x, y: p.y });
-        // Trail length depends on speed (faster = longer trail)
         const maxTrail = 15 * p.speed * 0.5; 
         if (p.trail.length > maxTrail) {
           p.trail.shift();
@@ -134,7 +129,6 @@ const Hero: React.FC = () => {
           ctx.beginPath();
           ctx.moveTo(p.trail[0].x, p.trail[0].y);
           
-          // Draw curves for smoother look
           for (let i = 1; i < p.trail.length - 1; i++) {
              const xc = (p.trail[i].x + p.trail[i+1].x) / 2;
              const yc = (p.trail[i].y + p.trail[i+1].y) / 2;
@@ -142,34 +136,30 @@ const Hero: React.FC = () => {
           }
           ctx.lineTo(p.x, p.y);
 
-          // Gradient stroke for the trail (fading out at the tail)
           const gradient = ctx.createLinearGradient(
             p.trail[0].x, p.trail[0].y, 
             p.x, p.y
           );
-          gradient.addColorStop(0, `rgba(0,0,0,0)`); // Transparent tail
-          gradient.addColorStop(1, p.color); // Solid head color
+          gradient.addColorStop(0, `rgba(0,0,0,0)`);
+          gradient.addColorStop(1, p.color);
 
           ctx.strokeStyle = gradient;
           ctx.lineWidth = p.size;
           ctx.lineCap = 'round';
           ctx.lineJoin = 'round';
-          // Add a glow effect
           ctx.shadowBlur = 10;
           ctx.shadowColor = p.color;
           ctx.stroke();
           
-          // Reset shadow for performance
           ctx.shadowBlur = 0;
         }
 
-        // Draw Head (The Photon) - Bright white core
+        // Draw Head
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fillStyle = '#FFFFFF';
         ctx.fill();
         
-        // Outer Glow for Head
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size * 3, 0, Math.PI * 2);
         ctx.fillStyle = p.color;
@@ -191,11 +181,11 @@ const Hero: React.FC = () => {
 
   return (
     <section id="home" className="relative h-screen flex flex-col justify-center items-center overflow-hidden bg-black">
-      {/* 1. Background Image (Static Texture) */}
+      {/* 1. Background Image (From Constants) */}
       <div className="absolute inset-0 z-0 opacity-40">
         <img 
-          src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=2070&auto=format&fit=crop" 
-          alt="Integrated Chip Background" 
+          src={HERO_BG_IMAGE}
+          alt="Lab Background" 
           className="w-full h-full object-cover scale-105"
         />
       </div>

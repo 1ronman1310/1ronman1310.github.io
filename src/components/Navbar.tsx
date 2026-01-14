@@ -24,18 +24,14 @@ const Navbar: React.FC = () => {
       const elementId = target.replace('#', '');
       
       if (location.pathname === '/') {
-        // We are already on home, just scroll
         scrollToSection(elementId);
       } else {
-        // We are on another page, go home first then scroll
         navigate('/');
-        // Use a small timeout to allow the Home component to mount
         setTimeout(() => {
           scrollToSection(elementId);
         }, 100);
       }
     } else {
-      // It's a route path (e.g., '/news')
       navigate(target);
       window.scrollTo(0, 0);
     }
@@ -44,7 +40,6 @@ const Navbar: React.FC = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      // Account for fixed header height approx 64px
       const headerOffset = 64; 
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
@@ -61,6 +56,10 @@ const Navbar: React.FC = () => {
     { name: 'Contact', target: '#contact', type: 'section' },
   ];
 
+  // Determine text color based on scroll and location
+  const textColorClass = !scrolled && !isOpen && location.pathname === '/' ? 'text-white' : 'text-apple-dark';
+  const logoBgClass = !scrolled && !isOpen && location.pathname === '/' ? 'bg-white text-black' : 'bg-apple-dark text-white';
+
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -69,15 +68,26 @@ const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+          {/* Logo Section */}
           <div className="flex-shrink-0 flex items-center">
             <button 
               onClick={() => handleNavigation('#home', true)}
-              className={`text-xl font-semibold tracking-tight transition-colors ${
-                !scrolled && !isOpen && location.pathname === '/' ? 'text-white' : 'text-apple-dark'
-              }`}
+              className="flex items-center gap-3 group text-left"
             >
-              {LAB_INFO.name}
+              {/* JW Logo Icon */}
+              <div className={`w-9 h-9 flex-shrink-0 rounded-lg flex items-center justify-center transition-colors ${logoBgClass}`}>
+                <span className="font-bold text-xs tracking-tighter">JW</span>
+              </div>
+
+              {/* Lab Name Text (Two Lines) */}
+              <div className={`flex flex-col ${textColorClass} transition-colors`}>
+                <span className="text-base md:text-lg font-bold leading-none">
+                  {LAB_INFO.name}
+                </span>
+                <span className="text-[10px] md:text-xs font-light opacity-90 leading-tight mt-0.5">
+                  {LAB_INFO.university}
+                </span>
+              </div>
             </button>
           </div>
 
@@ -102,7 +112,7 @@ const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`${!scrolled && !isOpen && location.pathname === '/' ? 'text-white' : 'text-apple-text'} hover:text-apple-blue focus:outline-none`}
+              className={`${textColorClass} hover:text-apple-blue focus:outline-none`}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
