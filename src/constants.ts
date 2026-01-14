@@ -326,7 +326,7 @@ export const PUBLICATIONS: Publication[] = [
     venue: 'Scientific Reports',
     year: 2014,
     highlight: false,
-    links: { pdf: 'public/papers/Silicon coupled-resonator.pdf' }
+    links: { pdf: '/papers/Silicon coupled-resonator.pdf' }
   }
 
 ];
