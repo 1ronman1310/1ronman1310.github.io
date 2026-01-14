@@ -321,7 +321,7 @@ export const PUBLICATIONS: Publication[] = [
   },
   {
     id: 'p10',
-    title: 'Silicon coupled-resonator optical-waveguide-based biosensors using light-scattering pattern recognition with pixelized mode-field intensity distributions',
+    title: 'Silicon coupled-resonator optical-waveguide-based ———— with pixelized mode-field intensity distributions',
     authors: ['Jiawei Wang'],
     venue: 'Scientific Reports',
     year: 2014,
