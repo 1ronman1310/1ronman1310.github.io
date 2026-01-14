@@ -174,21 +174,21 @@ export const MEMBERS: Member[] = [
 export const NEWS: NewsItem[] = [
   {
     id: 'n1',
-    date: '2024-05-15',
-    title: 'Breakthrough in On-chip Optical Computing',
-    description: 'Our latest work on photonic tensor cores was published in Nature Electronics.'
+    date: '2026-01-14',
+    title: 'Breakthrough in Non-Hermitian Cavity Quantum Electrodynamics',
+    description: 'Our latest work of single photon sources hybridly integrated on a LNOI chip will be published in Nature Nanotechnology soon.'
   },
   {
     id: 'n2',
-    date: '2024-02-10',
-    title: 'Dr. Hu received the Early Career Award',
-    description: 'Recognizing outstanding contributions to the field of integrated photonics.'
+    date: '2025-11-05',
+    title: 'Keynote talk at ACP2025',
+    description: 'Jiawei will deliver a keynote talk at ACP2025. See you in Suzhou!'
   },
   {
     id: 'n3',
-    date: '2023-11-20',
-    title: 'Two papers accepted to CLEO 2024',
-    description: 'Congratulations to our students for their hard work on silicon photonics.'
+    date: '2025-07-01',
+    title: '"Resonance trapping" via external coupling',
+    description: 'A new framework unifying internal and external coupling, published in Newton! https://www.cell.com/newton/fulltext/S2950-6360(25)00163-X'
   }
 ];
 
@@ -198,21 +198,21 @@ export const NEWS: NewsItem[] = [
 export const RESEARCH_AREAS: ResearchArea[] = [
   {
     id: 'r1',
-    title: 'Optical Neural Networks',
-    description: 'Developing high-speed, energy-efficient optical hardware for deep learning acceleration.',
-    image: 'https://images.unsplash.com/photo-1620052136008-012563a6286f?q=80&w=800&auto=format&fit=crop'
+    title: 'Silicon Photonics &  Thin-film Lithium Niobate Photonics',
+    description: 'Exploring new designs and mechanisms, aiming for scalable, high-yield, and reliable integrated photonic devices.',
+    image: 'public/research/SP.jpg'
   },
   {
     id: 'r2',
-    title: 'Silicon Photonics',
-    description: 'Designing large-scale integrated photonic circuits for data communication and sensing.',
-    image: 'https://images.unsplash.com/photo-1596496181848-3091d4878b24?q=80&w=800&auto=format&fit=crop'
+    title: 'Non-Hermitian Photonics & Topological Photonics',
+    description: 'Delving into the exquisite interplay of symmetry and topology in photonics, where gain, loss, and non-reciprocity enable unprecedented optical control.',
+    image: 'public/research/NH.jpg'
   },
   {
     id: 'r3',
-    title: 'Inverse Design',
-    description: 'Using AI and optimization algorithms to design novel nanophotonic structures.',
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop'
+    title: 'Optical sensing & Computing',
+    description: 'Harnessing the elegance of light-matter interactions to build secure, sensitive, and AI-empowered photonic applications.',
+    image: 'public/research/OC.jpg'
   }
 ];
 
