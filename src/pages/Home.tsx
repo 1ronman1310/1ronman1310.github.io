@@ -5,7 +5,7 @@ import ResearchCard from '../components/ResearchCard';
 import TeamMember from '../components/TeamMember';
 import { MEMBERS, NEWS, PUBLICATIONS, RESEARCH_AREAS, LAB_INFO } from '../constants';
 import { Role } from '../types';
-import { Calendar, FileText, Code, ArrowRight } from 'lucide-react';
+import { Calendar, FileText, Code, ArrowRight, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
@@ -15,7 +15,9 @@ const Home: React.FC = () => {
 
   // Filtered lists for Home page
   const recentNews = NEWS.slice(0, 3);
-  const recentPubs = PUBLICATIONS.slice(0, 5);
+  
+  // FIX: Filter publications by the 'highlight' flag first
+  const selectedPubs = PUBLICATIONS.filter(p => p.highlight);
 
   return (
     <>
@@ -30,7 +32,17 @@ const Home: React.FC = () => {
                 <Calendar size={12} />
                 {item.date}
               </div>
-              <h3 className="text-lg font-medium text-apple-dark mb-1 line-clamp-2">{item.title}</h3>
+              
+              {/* News Title with optional Link */}
+              {item.link ? (
+                <a href={item.link} target="_blank" rel="noopener noreferrer" className="block text-lg font-medium text-apple-dark hover:text-apple-blue transition-colors mb-1 line-clamp-2">
+                  {item.title}
+                  <ExternalLink size={12} className="inline ml-1 -mt-1 opacity-50"/>
+                </a>
+              ) : (
+                <h3 className="text-lg font-medium text-apple-dark mb-1 line-clamp-2">{item.title}</h3>
+              )}
+
               <p className="text-sm text-apple-subtext leading-relaxed line-clamp-3">{item.description}</p>
             </div>
           ))}
@@ -59,7 +71,7 @@ const Home: React.FC = () => {
       {/* Publications Section */}
       <Section id="publications" title="Selected Publications" subtitle="Our recent highlights.">
         <div className="space-y-6">
-          {recentPubs.map((pub) => (
+          {selectedPubs.map((pub) => (
             <div key={pub.id} className="group flex flex-col sm:flex-row gap-4 sm:items-baseline border-b border-gray-100 pb-4 last:border-0">
               <span className="text-sm font-bold text-apple-subtext w-12 flex-shrink-0">{pub.year}</span>
               <div className="flex-1">
@@ -68,7 +80,7 @@ const Home: React.FC = () => {
                 </h4>
                 <p className="text-apple-subtext text-sm mt-1">
                   {pub.authors.map((author, index) => (
-                    <span key={index} className={author.includes("Doe") ? "font-semibold text-apple-dark" : ""}>
+                    <span key={index} className={author.includes("Wang") ? "font-semibold text-apple-dark" : ""}>
                       {author}{index < pub.authors.length - 1 ? ", " : ""}
                     </span>
                   ))}
@@ -101,7 +113,7 @@ const Home: React.FC = () => {
       </Section>
 
       {/* Team Section */}
-      <Section id="team" title="Our Team" subtitle="Meet the people behind the research." dark>
+      <Section id="team" title="Our Team" subtitle="Meet the people behind the endeavor." dark>
         {/* PI Highlight */}
         <div className="mb-16">
           {pi && <TeamMember member={pi} />}

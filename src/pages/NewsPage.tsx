@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Section from '../components/Section';
 import { NEWS } from '../constants';
-import { Calendar } from 'lucide-react';
+import { Calendar, ExternalLink } from 'lucide-react';
 
 const NewsPage: React.FC = () => {
   useEffect(() => {
@@ -21,7 +21,17 @@ const NewsPage: React.FC = () => {
                 </div>
               </div>
               <div className="flex-1 pb-8 border-b border-gray-100 last:border-0">
-                <h3 className="text-xl font-semibold text-apple-dark mb-2">{item.title}</h3>
+                {item.link ? (
+                  <a href={item.link} target="_blank" rel="noopener noreferrer" className="group">
+                    <h3 className="text-xl font-semibold text-apple-dark mb-2 group-hover:text-apple-blue transition-colors flex items-center gap-2">
+                      {item.title}
+                      <ExternalLink size={16} className="opacity-50"/>
+                    </h3>
+                  </a>
+                ) : (
+                  <h3 className="text-xl font-semibold text-apple-dark mb-2">{item.title}</h3>
+                )}
+                
                 <p className="text-apple-subtext leading-relaxed">{item.description}</p>
               </div>
             </div>

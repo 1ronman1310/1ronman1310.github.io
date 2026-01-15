@@ -16,7 +16,7 @@ export const LAB_INFO: LabInfo = {
 // 1.1 HERO BACKGROUND IMAGE (Modify here)
 // ==========================================
 // Home 页面大背景图。可以使用网络链接，也可以把图片放在 public/images/ 下，然后填 '/images/bg.jpg'
-export const HERO_BG_IMAGE = "public/papers/bg.png";
+export const HERO_BG_IMAGE = "/papers/bg.png";
 
 
 // ==========================================
@@ -29,7 +29,7 @@ export const MEMBERS: Member[] = [
     id: 'pi-1',
     name: 'Dr. Jiawei Wang', // 修改名字
     role: Role.PI,
-    bio: 'Wang Jiawei is currently a full professor at the Harbin Institute of Technology (Shenzhen). He received his PhD degree in Electronic & Computer Engineering from the Hong Kong University of Science and Technology in 2016. From 2016 to 2020, he was engaged in post-doctoral research at the Leibniz IFW Dresden and the Department of Electronics and Information Engineering at Chemnitz University of Technology, Germany.He has published over 70 papers in SCI-indexed journals, including Nature Photonics, Science Advances, Laser & Photonics Reviews, Nano Letters, and ACS Nano, as well as more than 20 proceedings in EI-indexed conferences such as CLEO, SPIE Photonics West, OECC, and ACP. He has also co-authored two book chapters and holds six patents.',
+    bio: "Wang Jiawei is currently a full professor at the Harbin Institute of Technology (Shenzhen). He received his PhD degree in Electronic & Computer Engineering from the Hong Kong University of Science and Technology in 2016. From 2016 to 2020, he was engaged in post-doctoral research at the Leibniz IFW Dresden and the Department of Electronics and Information Engineering at Chemnitz University of Technology, Germany.\n\nHe has published over 70 papers in SCI-indexed journals, including Nature Photonics, Science Advances, Laser & Photonics Reviews, Nano Letters, and ACS Nano, as well as more than 20 proceedings in EI-indexed conferences such as CLEO, SPIE Photonics West, OECC, and ACP. He has also co-authored two book chapters and holds six patents.",
     image: '/images/wjw.jpg', // 修改照片链接
     email: 'wangjw7@hit.edu.cn',
     links: {
@@ -136,7 +136,7 @@ export const MEMBERS: Member[] = [
     name: 'Juntao Duan',
     role: Role.ALUMNI,
     bio: 'Researching silicon photonics.',
-    image: 'https://picsum.photos/400/400?random=6',
+    image: '/images/djt.jpg',
   },
   {
     id: 'alumni-5',
@@ -150,7 +150,7 @@ export const MEMBERS: Member[] = [
     name: 'Yihao Chen',
     role: Role.ALUMNI,
     bio: 'Researching silicon photonics.',
-    image: 'https://picsum.photos/400/400?random=6',
+    image: '/images/cyh.jpg',
   },
   {
     id: 'alumni-7',
@@ -188,7 +188,8 @@ export const NEWS: NewsItem[] = [
     id: 'n3',
     date: '2025-07-01',
     title: '"Resonance trapping" via external coupling',
-    description: 'A new framework unifying internal and external coupling, published in Newton! https://www.cell.com/newton/fulltext/S2950-6360(25)00163-X'
+    description: 'A new framework unifying internal and external coupling, published in Newton!',
+    link: 'https://www.cell.com/newton/fulltext/S2950-6360(25)00163-X',
   }
 ];
 

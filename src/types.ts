@@ -39,6 +39,7 @@ export interface NewsItem {
   date: string; // YYYY-MM-DD
   title: string;
   description?: string;
+  link?: string; // Optional external or internal link
 }
 
 export interface ResearchArea {

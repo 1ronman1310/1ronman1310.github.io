@@ -191,8 +191,8 @@ const Hero: React.FC = () => {
       </div>
 
       {/* 2. Gradient Overlay for readability and depth */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-r from-black/80 via-black/50 to-black/80"></div>
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/60 via-transparent to-black/90"></div>
+      <div className="absolute inset-0 z-0 bg-gradient-to-r from-black/20 via-black/20 to-black/80"></div>
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/20 via-transparent to-black/90"></div>
 
       {/* 3. Canvas Layer (The Flowing Light Streams) */}
       <canvas 
