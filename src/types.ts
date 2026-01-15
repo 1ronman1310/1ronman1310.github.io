@@ -1,5 +1,6 @@
 export enum Role {
   PI = "Principal Investigator",
+  POSTDOC = "Postdoctoral Researcher",
   PHD = "PhD Student",
   MASTER = "Master Student",
   ALUMNI = "Alumni"
@@ -10,6 +11,7 @@ export interface Member {
   name: string;
   role: Role;
   bio: string;
+  currentPosition?: string; // New field for Alumni destination or current job
   email?: string;
   image: string; // URL
   links?: {

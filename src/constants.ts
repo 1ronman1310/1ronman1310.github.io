@@ -59,7 +59,7 @@ export const MEMBERS: Member[] = [
   {
     id: 'phd-3',
     name: 'Xiujie Dou',
-    role: Role.PHD,
+    role: Role.POSTDOC,
     bio: 'Researching silicon photonics.',
     image: '/images/dxj.jpg',
     email: 'student.c@univ.edu'
@@ -117,11 +117,12 @@ export const MEMBERS: Member[] = [
   },
   {
     id: 'alumni-2',
-    name: 'Jingjiang Li',
+    name: 'Jingjiang Lin',
     role: Role.ALUMNI,
     bio: 'Researching silicon photonics.',
     image: '/images/ljj.jpg',
-    email: 'student.d@univ.edu'
+    email: 'student.d@univ.edu',
+    currentPosition: '[Optical Product Development Engineer],TRIPLE-STONE TECHNOLOGY CO., LTD',
   },
   {
     id: 'alumni-3',
@@ -129,7 +130,8 @@ export const MEMBERS: Member[] = [
     role: Role.ALUMNI,
     bio: 'Researching silicon photonics.',
     image: '/images/dmq.jpg',
-    email: 'student.e@univ.edu'
+    email: 'student.e@univ.edu',
+    currentPosition: 'PhD at CityUHK',
   },
   {
     id: 'alumni-4',
@@ -137,13 +139,14 @@ export const MEMBERS: Member[] = [
     role: Role.ALUMNI,
     bio: 'Researching silicon photonics.',
     image: '/images/djt.jpg',
+    currentPosition: '[Electro-Optical Systems Engineer], Shanghai MlLEX Semiconductor Co., Ltd.',
   },
   {
     id: 'alumni-5',
     name: 'Yu Miao',
     role: Role.ALUMNI,
     bio: 'Researching silicon photonics.',
-    image: 'https://picsum.photos/400/400?random=6',
+    image: '/images/my.jpg',
   },
   {
     id: 'alumni-6',
@@ -151,6 +154,7 @@ export const MEMBERS: Member[] = [
     role: Role.ALUMNI,
     bio: 'Researching silicon photonics.',
     image: '/images/cyh.jpg',
+    currentPosition: 'PhD at CUHK',
   },
   {
     id: 'alumni-7',
